@@ -84,7 +84,7 @@ public class VotingActivity extends AppCompatActivity {
                                     startActivity(new Intent(VotingActivity.this, ResultActivity.class));
                                     finish();
                                 }else{
-                                    Toast.makeText(VotingActivity.this, "Voted Casted Successfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(VotingActivity.this, "Voted Failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

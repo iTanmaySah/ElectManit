@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ import java.util.List;
 public class AllCandidateActivity extends AppCompatActivity {
 
     private RecyclerView candidateRV;
-    private Button startBtn;
+    private Button castVoteBtn;
     private List<Candidate> list;
     private CandidateAdapter adapter;
 
@@ -45,6 +46,8 @@ public class AllCandidateActivity extends AppCompatActivity {
         adapter = new CandidateAdapter(this,list);
         candidateRV.setLayoutManager(new LinearLayoutManager(this));
         candidateRV.setAdapter(adapter);
+
+
 
         if(FirebaseAuth.getInstance().getCurrentUser() != null){
 
@@ -66,7 +69,7 @@ public class AllCandidateActivity extends AppCompatActivity {
 
                                 adapter.notifyDataSetChanged();
                             }else{
-                                Toast.makeText(AllCandidateActivity.this, "Candidate not found", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AllCandidateActivity.this, "Candidate not found error", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -92,8 +95,8 @@ public class AllCandidateActivity extends AppCompatActivity {
                         if(finish != null) {
                             if (finish.equals("voted")) {
                                 Toast.makeText(AllCandidateActivity.this, "Your vote is already counted", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(AllCandidateActivity.this, VotingActivity.class));
-                                finish();
+//                                startActivity(new Intent(AllCandidateActivity.this, VotingActivity.class));
+//                                finish();
                             }
                         }
                     }

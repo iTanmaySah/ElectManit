@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     private TextView nameTxt, scholarIdTxt;
     private String uid;
     private FirebaseFirestore firebaseFirestore;
-    private Button createBtn, voteBtn, startBtn;
+    private Button createBtn, resultBtn, viewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +42,9 @@ public class HomeActivity extends AppCompatActivity {
 
         nameTxt = findViewById(R.id.name);
         scholarIdTxt = findViewById(R.id.scholar_id);
-        createBtn = findViewById(R.id.admin_btn);
-        voteBtn = findViewById(R.id.give_vote_btn);
-        startBtn = findViewById(R.id.candidate_create_voting);
+        createBtn = findViewById(R.id.create_candidate_btn);
+        resultBtn = findViewById(R.id.result_btn);
+        viewBtn = findViewById(R.id.view_candidates_btn);
 
 
         sharedPreferences = getApplicationContext().getSharedPreferences(PREFERENCES, MODE_PRIVATE);
@@ -79,12 +79,10 @@ public class HomeActivity extends AppCompatActivity {
 
                             if(name.equals("admin")){
                                 createBtn.setVisibility(View.VISIBLE);
-                                startBtn.setVisibility(View.VISIBLE);
-                                voteBtn.setVisibility(View.GONE);
+
                             }else{
                                 createBtn.setVisibility(View.GONE);
-                                startBtn.setVisibility(View.GONE);
-                                voteBtn.setVisibility(View.VISIBLE);
+
                             }
 
                             nameTxt.setText(name);
@@ -104,19 +102,23 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        startBtn.setOnClickListener(new View.OnClickListener() {
+        viewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this,AllCandidateActivity.class));
+
             }
         });
 
-        voteBtn.setOnClickListener(new View.OnClickListener() {
+        resultBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, AllCandidateActivity.class));
+                startActivity(new Intent(HomeActivity.this, ResultActivity.class));
             }
         });
+
+
+
     }//end of oncreate function
 
     @Override
