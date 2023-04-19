@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "381080367467",
+    "project_id": "electmanit",
+    "storage_bucket": "electmanit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:381080367467:android:a3319149bc17da38e59c2e",
+        "android_client_info": {
+          "package_name": "com.example.electmanit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "381080367467-as9f50lde7k3f8j3h55ba1i0lb1jktev.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlhqckNouFZsBUPIFyJJ_Rub1pWewY5bQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "381080367467-as9f50lde7k3f8j3h55ba1i0lb1jktev.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
