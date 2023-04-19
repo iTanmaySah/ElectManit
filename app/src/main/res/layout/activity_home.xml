@@ -83,23 +83,13 @@
                 android:id="@+id/view_candidates_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View Candidates"
+                android:text="Cast a Vote"
                 android:textAllCaps="false"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:backgroundTint="@color/black"
                 android:padding="8dp"
                 android:layout_marginBottom="8dp" />
 
-            <Button
-                android:id="@+id/give_vote_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vote Now"
-                android:textAllCaps="false"
-                android:visibility="gone"
-                android:backgroundTint="@color/black"
-                android:padding="8dp"
-                android:layout_marginBottom="8dp" />
 
             <Button
                 android:id="@+id/result_btn"

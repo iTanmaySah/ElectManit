@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:text="Result is not issued yet, Please Wait"
+            android:text="Result is not issued yet, Please Vote First"
             android:textSize="20sp"
             android:visibility="gone"
             android:textColor="#757575" />

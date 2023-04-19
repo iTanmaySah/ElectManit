@@ -80,6 +80,7 @@ public class HomeActivity extends AppCompatActivity {
                             if(name.equals("admin")){
                                 createBtn.setVisibility(View.VISIBLE);
 
+
                             }else{
                                 createBtn.setVisibility(View.GONE);
 
@@ -119,6 +120,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
+
     }//end of oncreate function
 
     @Override
@@ -134,7 +136,6 @@ public class HomeActivity extends AppCompatActivity {
         switch(id){
             case R.id.show_result:
                  startActivity(new Intent(HomeActivity.this, ResultActivity.class));
-
                  return true;
 
              case R.id.log_out:

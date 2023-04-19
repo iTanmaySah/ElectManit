@@ -94,9 +94,9 @@ public class AllCandidateActivity extends AppCompatActivity {
 //                        assert finish != null;
                         if(finish != null) {
                             if (finish.equals("voted")) {
-                                Toast.makeText(AllCandidateActivity.this, "Your vote is already counted", Toast.LENGTH_SHORT).show();
-//                                startActivity(new Intent(AllCandidateActivity.this, VotingActivity.class));
-//                                finish();
+                                Toast.makeText(AllCandidateActivity.this, "Your vote is already counted, You can view results", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(AllCandidateActivity.this, ResultActivity.class));
+                                finish();
                             }
                         }
                     }

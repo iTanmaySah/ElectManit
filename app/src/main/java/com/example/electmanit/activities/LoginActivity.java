@@ -137,7 +137,7 @@ public class LoginActivity extends AppCompatActivity {
                                             });
 
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "User data not found", Toast.LENGTH_SHORT).show();
+                                  //  Toast.makeText(LoginActivity.this, "User data not found", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         }
@@ -151,7 +151,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 });
 
-        forgetPassword.findViewById(R.id.forget_password).setOnClickListener(new View.OnClickListener() {
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class));
