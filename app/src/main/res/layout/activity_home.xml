@@ -5,18 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ForgetPasswordActivity">
+
+    tools:context=".activities.ForgetPasswordActivity"
+    android:background="#088395">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="132dp"
         android:layout_height="153dp"
-        android:src="@drawable/manit_logo"
+        android:src="@drawable/manit_logo_color"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="60sp"
         android:layout_marginBottom="16dp" />
 
     <TextView
@@ -75,7 +77,7 @@
                 android:text="Add a candidate"
                 android:textAllCaps="false"
                 android:visibility="gone"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="#0A4D68"
                 android:padding="8dp"
                 android:layout_marginBottom="8dp" />
 
@@ -86,7 +88,7 @@
                 android:text="Cast a Vote"
                 android:textAllCaps="false"
                 android:visibility="visible"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="#0A4D68"
                 android:padding="8dp"
                 android:layout_marginBottom="8dp" />
 
@@ -97,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="View Results"
                 android:textAllCaps="false"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="#0A4D68"
                 android:padding="8dp" />
 
         </LinearLayout>

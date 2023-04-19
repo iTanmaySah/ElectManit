@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="#088395"
     tools:context=".activities.AllCandidateActivity">
 
     <TextView
@@ -18,7 +18,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black" /> <!-- Set text color to black -->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/candidates_rv"
@@ -35,26 +36,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/empty_state_image"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/ic_empty_state"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:visibility="gone" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/give_vote_btn"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:text="Cast a Vote"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textAllCaps="false"-->
-<!--        android:textColor="@android:color/white"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:backgroundTint="@color/black"-->
-<!--        android:elevation="4dp"-->
-<!--        android:layout_alignParentBottom="true" />-->
 
 </RelativeLayout>

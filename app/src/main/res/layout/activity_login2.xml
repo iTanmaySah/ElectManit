@@ -7,12 +7,12 @@
     android:gravity="center"
     tools:context=".activities.LoginActivity"
     android:orientation="vertical"
-    android:background="#ffffff">
+    android:background="#088395">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/manit_logo"
+        android:src="@drawable/manit_logo_color"
         android:scaleType="fitCenter"
         android:layout_marginTop="48dp"
         />
@@ -26,7 +26,7 @@
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="#000000" />
+        android:textColor="@color/black" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -34,15 +34,16 @@
         android:layout_marginTop="48dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+
         app:cardElevation="16dp"
-        app:cardCornerRadius="16dp">
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:background="#ffffff">
+            android:padding="16dp">
 
             <EditText
                 android:id="@+id/user_email"
@@ -69,17 +70,18 @@
                 android:text="Forgot Password?"
                 android:layout_gravity="end"
                 android:layout_marginTop="8dp"
-                android:textColor="#000000" />
+                android:textColor="#0A4D68" />
 
             <Button
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#000000"
+                android:backgroundTint="#0A4D68"
                 android:text="Login"
                 android:textAllCaps="false"
-                android:textColor="#ffffff" />
+                android:textColor="#FFFFFF" />
+
             <TextView
                 android:id="@+id/dont_have_acc"
                 android:layout_width="wrap_content"
