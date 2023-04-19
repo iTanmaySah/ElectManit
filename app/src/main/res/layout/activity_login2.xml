@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:gravity="center"
     tools:context=".activities.LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ffffff">
 
     <ImageView
         android:layout_width="150dp"
@@ -24,7 +25,8 @@
         android:text="Login"
         android:textAlignment="center"
         android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#000000" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -39,7 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:background="#ffffff">
 
             <EditText
                 android:id="@+id/user_email"
@@ -48,7 +51,7 @@
                 android:layout_marginTop="16dp"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
-               />
+                android:textColor="#000000" />
 
             <EditText
                 android:id="@+id/user_password"
@@ -57,7 +60,7 @@
                 android:layout_marginTop="16dp"
                 android:hint="Password"
                 android:inputType="textPassword"
-                 />
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/forget_password"
@@ -66,23 +69,24 @@
                 android:text="Forgot Password?"
                 android:layout_gravity="end"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/black" />
+                android:textColor="#000000" />
 
             <Button
                 android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="#000000"
                 android:text="Login"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="#ffffff" />
             <TextView
                 android:id="@+id/dont_have_acc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:text="Don't have an account?"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textAlignment="center"
                 android:textSize="17sp"
                 android:layout_gravity="center"/>
