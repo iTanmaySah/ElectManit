@@ -29,6 +29,7 @@
         android:textStyle="bold"
         />
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -60,6 +61,13 @@
                 android:hint="Candidate Branch"
                 />
 
+            <EditText
+                android:id="@+id/candidate_batch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Enter Candidate Batch (year of passing)"
+                />
 
             <Spinner
                 android:id="@+id/candidate_spinner"

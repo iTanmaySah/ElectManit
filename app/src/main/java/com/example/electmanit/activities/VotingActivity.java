@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class VotingActivity extends AppCompatActivity {
 
-    private TextView name, post, branch;
+    private TextView name, post, branch, batch;
     private Button voteBtn;
     private FirebaseFirestore firebaseFirestore;
 
@@ -42,18 +42,20 @@ public class VotingActivity extends AppCompatActivity {
         post = findViewById(R.id.post);
         branch = findViewById(R.id.branch);
         voteBtn = findViewById(R.id.vote_btn);
+        batch = findViewById(R.id.batch);
 
         String uid = FirebaseAuth.getInstance().getUid();
-
 
         String nm = getIntent().getStringExtra("name");
         String pos = getIntent().getStringExtra("post");
         String bran = getIntent().getStringExtra("branch");
+        String btch = getIntent().getStringExtra("batch");
         String id = getIntent().getStringExtra("id");
 
         name.setText(nm);
         post.setText(pos);
         branch.setText(bran);
+        batch.setText(btch);
 
         voteBtn.setOnClickListener(new View.OnClickListener() {
             @Override

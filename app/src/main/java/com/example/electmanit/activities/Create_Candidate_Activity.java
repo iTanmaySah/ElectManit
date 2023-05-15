@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class Create_Candidate_Activity extends AppCompatActivity {
 
-    private EditText candidateName, candidateBranch;
+    private EditText candidateName, candidateBranch, candidateBatch;
     private Spinner candidateSpinner;
     private Button submitBtn;
 
@@ -48,6 +48,7 @@ public class Create_Candidate_Activity extends AppCompatActivity {
         candidateName = findViewById(R.id.candidate_name);
         candidateBranch = findViewById(R.id.candidate_branch);
         candidateSpinner = findViewById(R.id.candidate_spinner);
+        candidateBatch = findViewById(R.id.candidate_batch);
         submitBtn = findViewById(R.id.candidate_submit_btn);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line,candPost);
@@ -60,14 +61,17 @@ public class Create_Candidate_Activity extends AppCompatActivity {
                 String name = candidateName.getText().toString().trim();
                 String branch = candidateBranch.getText().toString().trim();
                 String post = candidateSpinner.getSelectedItem().toString();
+                String batch = candidateBatch.getText().toString().trim();
+
 
                 if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(branch) && !TextUtils.isEmpty(post)){
 
                     String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                     Map<String, Object> map = new HashMap<>();
                     map.put("name", name);
-                    map.put("candidate branch", branch);
+                    map.put("branch", branch);
                     map.put("post", post);
+                    map.put("batch",batch);
                     map.put("timestamp", FieldValue.serverTimestamp());
 
                     firebaseFirestore.collection("Candidate").add(map).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {

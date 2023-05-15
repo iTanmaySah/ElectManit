@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:hint="Username"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:backgroundTint="@color/black"
                 android:textColor="@android:color/black" />
 
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:hint="Scholar ID"
-                android:inputType="textEmailAddress"
+                android:inputType="number"
                 android:backgroundTint="@color/black"
                 android:textColor="@android:color/black" />
 

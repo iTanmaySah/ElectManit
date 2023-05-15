@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.BreakIterator;
 import java.util.List;
 
 public class CandidateResultAdapter extends RecyclerView.Adapter<CandidateResultAdapter.ViewHolder>{
@@ -35,8 +36,6 @@ public class CandidateResultAdapter extends RecyclerView.Adapter<CandidateResult
         firebaseFirestore = FirebaseFirestore.getInstance();
     }
 
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,6 +49,7 @@ public class CandidateResultAdapter extends RecyclerView.Adapter<CandidateResult
         holder.name.setText(list.get(position).getName());
         holder.branch.setText(list.get(position).getBranch());
         holder.post.setText(list.get(position).getPosition());
+        holder.batch.setText(list.get(position).getBatch());
 
         firebaseFirestore.collection("Candidate/" + list.get(position).getId() + "/Vote")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -61,7 +61,6 @@ public class CandidateResultAdapter extends RecyclerView.Adapter<CandidateResult
                             Candidate candidate = list.get(position);
                             candidate.setCount(count);
                             list.set(position,candidate);
-
                             notifyDataSetChanged();
                         }
                     }
@@ -78,7 +77,7 @@ public class CandidateResultAdapter extends RecyclerView.Adapter<CandidateResult
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView name, post, branch, result;
+        private TextView name, post, branch, result,batch;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -87,11 +86,8 @@ public class CandidateResultAdapter extends RecyclerView.Adapter<CandidateResult
             name = itemView.findViewById(R.id.name);
             post = itemView.findViewById(R.id.post);
             branch = itemView.findViewById(R.id.branch);
+            batch = itemView.findViewById(R.id.batch);
             result = itemView.findViewById(R.id.candidate_result);
-
-
         }
     }
-
 }
-

@@ -64,6 +64,7 @@ public class ResultActivity extends AppCompatActivity {
                                             snapshot.getString("name"),
                                             snapshot.getString("branch"),
                                             snapshot.getString("post"),
+                                            snapshot.getString("batch"),
                                             snapshot.getId() //this will give back document id
                                     ));
                                 }

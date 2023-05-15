@@ -17,6 +17,7 @@ import com.example.electmanit.R;
 import com.example.electmanit.activities.VotingActivity;
 import com.example.electmanit.model.Candidate;
 
+import java.text.BreakIterator;
 import java.util.List;
 
 public class CandidateAdapter extends RecyclerView.Adapter<CandidateAdapter.ViewHolder>{
@@ -43,6 +44,7 @@ public class CandidateAdapter extends RecyclerView.Adapter<CandidateAdapter.View
         holder.name.setText(list.get(position).getName());
         holder.branch.setText(list.get(position).getBranch());
         holder.post.setText(list.get(position).getPosition());
+        holder.batch.setText(list.get(position).getBatch());
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +53,7 @@ public class CandidateAdapter extends RecyclerView.Adapter<CandidateAdapter.View
                 intent.putExtra("name",list.get(position).getName());
                 intent.putExtra("branch",list.get(position).getBranch());
                 intent.putExtra("post",list.get(position).getPosition());
+                intent.putExtra("batch",list.get(position).getBatch());
                 intent.putExtra("id",list.get(position).getId());
                 context.startActivity(intent);
 //                Activity activity = (Activity) context;
@@ -68,7 +71,8 @@ public class CandidateAdapter extends RecyclerView.Adapter<CandidateAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView name, post, branch;
+
+        private TextView name, post, branch,batch;
         private Button voteBtn;
         private CardView cardView;
 
@@ -78,10 +82,9 @@ public class CandidateAdapter extends RecyclerView.Adapter<CandidateAdapter.View
             name = itemView.findViewById(R.id.name);
             post = itemView.findViewById(R.id.post);
             branch = itemView.findViewById(R.id.branch);
+            batch = itemView.findViewById(R.id.batch);
             voteBtn = itemView.findViewById(R.id.vote_btn);
             cardView = itemView.findViewById(R.id.cardview);
-
-
         }
     }
 
